@@ -1,0 +1,144 @@
+**cd path/script**
+**mongo < script.js**
+
+
+print("\n******** Create a database called 'my_first_db' ********");
+print("-------- Cree una base de datos llamada 'my_first_db' --------\n");
+print("\nCommando: use my_first_db");
+use my_first_db
+sleep(3000)
+
+print("\n******** Create 5 students with the right information ********");
+print("-------- Crear 5 estudiantes con la información adecuada --------\n");
+
+print("\nCommando: db.student.insert({name:'Ada Lovelace', home_state:'California', lucky_number:205, birthday:{month: 12, day: 10, year: 1815}})");
+db.student.insert({name:"Ada Lovelace", home_state:"California", lucky_number:205, birthday:{month: 12, day: 10, year: 1815}})
+print("1");
+sleep(3000)
+
+print("\nCommando: db.student.insert({name:'Adam Smith', home_state:'Washington', lucky_number:35, birthday:{month: 01, day: 24, year: 2001}})");
+db.student.insert({name:"Adam Smith", home_state:"Washington", lucky_number:35, birthday:{month: 01, day: 24, year: 2001}})
+print("2");
+sleep(3000)
+
+print("\nCommando: db.student.insert({name:'Florence White', home_state:'Texas', lucky_number:7, birthday:{month: 07, day: 07, year: 1997}})");
+db.student.insert({name:"Florence White", home_state:"Texas", lucky_number:7, birthday:{month: 07, day: 07, year: 1997}})
+print("3");
+sleep(3000)
+
+print("\nCommando: db.student.insert({name:'Michael Yong', home_state:'Ohio', lucky_number:2, birthday:{month: 11, day: 02, year: 1985}})");
+db.student.insert({name:"Michael Yong", home_state:"Ohio", lucky_number:2, birthday:{month: 11, day: 02, year: 1985}})
+print("4");
+sleep(3000)
+
+print("\nCommando: db.student.insert({name:'Rachel Clark', home_state:'Alaska', lucky_number:5, birthday:{month: 05, day: 27, year: 1995}})");
+db.student.insert({name:"Rachel Clark", home_state:"Alaska", lucky_number:5, birthday:{month: 05, day: 27, year: 1995}})
+print("5");
+sleep(3000)
+
+print("\n******** Get all students ********");
+print("-------- Consigue todos los estudiantes --------\n");
+print("\nCommando: db.student.find()");
+db.student.find()
+sleep(3000)
+
+print("\n******** Retrieves all students who are from California (San Jose Dojo) or Washington (Seattle Dojo) ********");
+print("-------- Recupera a todos los estudiantes que son de California (San Jose Dojo) o Washington (Seattle Dojo) --------\n");
+print("\nCommando: db.student.find({$or:[{home_state:'California'},{home_state:'Washington'}]})");
+db.student.find({$or:[{home_state:"California"},{home_state:"Washington"}]})
+sleep(3000)
+
+print("\n******** Get all the students whose lucky number is greater than 3 ********");
+print("-------- Obten todos los estudiantes cuyo número de la suerte sea mayor que 3 --------\n");
+print("\nCommando: db.student.find({lucky_number: {$gt: 3}})");
+db.student.find({lucky_number: {$gt: 3}})
+sleep(3000)
+
+print("\n******** Get all the students whose lucky number is less than or equal to 10 ********");
+print("-------- Obten todos los estudiantes cuyo número de la suerte sea menor o igual a 10 --------\n");
+print("\nCommando: db.student.find({lucky_number: {$lte: 10}})");
+db.student.find({lucky_number: {$lte: 10}})
+sleep(3000)
+
+print("\n******** Get all students whose lucky number is between 1 and 9 (inclusive) ********");
+print("-------- Obten todos los estudiantes cuyo número de la suerte esté entre 1 y 9 (inclusivo) --------\n");
+print("\nCommando: db.student.find({ lucky_number: { $gt: 1, $lte: 9 }})");
+db.student.find({ lucky_number: { $gt: 1, $lte: 9 }})
+sleep(3000)
+
+print("\n******** Add a field to each student collection called 'interests' which is an ARRAY. It should contain the following entries: 'encoding', 'brunch', 'MongoDB'. Do this in ONE operation ********");
+print("-------- Agrega un campo a cada colección de estudiantes llamado 'intereses' que es un ARRAY. Debe contener las siguientes entradas: 'codificación', 'brunch', 'MongoDB'. Haz esto en UNA operación. --------\n");
+print("\nCommando: db.student.updateMany({},{$set: {interests: ['codificación', 'brunch', 'MongoDB']}})");
+db.student.updateMany({},{$set: {interests: ["codificación", "brunch", "MongoDB"]}})
+sleep(3000)
+
+print("\n******** Add some unique interests for each individual student in each of their interest array ********");
+print("-------- Agrega algunos intereses únicos para cada estudiante en particular en cada una de sus matrices de intereses --------\n");
+print("\nCommando: db.student.updateMany({},{$push: {interests: {$each: ['Java', 'React']}}})");
+db.student.updateMany({},{$push: {interests: {$each: ["Java", "React"]}}})
+sleep(3000)
+
+print("\n******** Add the interest 'taxes' to someone's interest array ********");
+print("-------- Agrega los 'impuestos' de intereses a la matriz de intereses de alguien --------\n");
+print("\nCommando: db.student.updateOne({ name: 'Adam Smith' },{ $set: { interests: ['Coding', 'Brunch', 'MongoDB', 'Java', 'React', 'Taxes'] }})");
+db.student.updateOne({ name: "Adam Smith" },{ $set: { interests: ["Coding", "Brunch", "MongoDB", "Java", "React", "Taxes"] }})
+sleep(3000)
+
+print("\n******** Removes the 'tax' interest you just added ********");
+print("-------- Elimina los intereses de 'impuestos' que acaba de agregar --------\n");
+print("\nCommando: db.student.updateOne({ name: 'Adam Smith' },{ $pull: { interests: 'Taxes' }})");
+db.student.updateOne({ name: "Adam Smith" },{ $pull: { interests: "Taxes" }})
+sleep(3000)
+
+print("\n******** Remove all students who are from California ********");
+print("-------- Eliminar a todos los estudiantes que son de California --------\n");
+print("\nCommando: db.student.deleteMany({home_state: 'California'})");
+db.student.deleteMany({home_state: "California"})
+sleep(3000)
+
+print("\n******** Delete a student by name ********");
+print("-------- Eliminar a un alumno por su nombre --------\n");
+print("\nCommando: db.student.deleteOne({name: 'Michael Yong'})");
+db.student.deleteOne({name: "Michael Yong"})
+sleep(3000)
+
+print("\n******** Withdraw a student whose lucky number is greater than 5 (ONLY ONE) ********");
+print("-------- Retira a un estudiante cuyo número de la suerte sea mayor que 5 (SOLO UNO) --------\n");
+print("\nCommando: db.student.deleteOne({lucky_number: {$gt: 5}})");
+db.student.deleteOne({lucky_number: {$gt: 5}})
+sleep(3000)
+
+print("\n******** Add a field to each student collection called 'number_of_belts' and set it to 0 ********");
+print("-------- Agrega un campo a cada colección de estudiantes llamado 'number_of_belts' y configúralo en 0 --------\n");
+print("\nCommando: db.student.updateMany({}, {$set: { number_of_belts: 0 }})");
+db.student.updateMany({}, {$set: { number_of_belts: 0 }})
+sleep(3000)
+
+print("\n******** Increase this field by 1 for all students in Washington (Seattle Dojo) ********");
+print("-------- Incrementa este campo en 1 para todos los estudiantes en Washington (Seattle Dojo) --------\n");
+print("\nCommando: db.student.updateMany({home_state:'Washington'}, {$inc:{ number_of_belts: 1 }})");
+db.student.updateMany({home_state:"Washington"}, {$inc:{ number_of_belts: 1 }})
+sleep(3000)
+
+print("\n******** Rename the 'number_of_belts' field to 'belts_earned' ********");
+print("-------- Cambia el nombre del campo 'number_of_belts' a 'belts_earned' --------\n");
+print("\nCommando: db.student.updateMany({}, { $rename: { 'number_of_belts':'belts_earned' }})");
+db.student.updateMany({}, { $rename: { "number_of_belts":"belts_earned" }})
+sleep(3000)
+
+print("\n******** Remove the 'lucky_number' field ********");
+print("-------- Elimina el campo 'lucky_number' --------\n");
+print("\nCommando: db.student.updateMany({}, {$unset: { lucky_number: '' }})");
+db.student.updateMany({}, {$unset: { lucky_number: "" }})
+sleep(3000)
+
+print("\n******** Add an 'updated_on' field and set the value as the current date ********");
+print("-------- Agrega un campo 'updated_on' y establece el valor como la fecha actual --------\n");
+print("\nCommando: db.student.updateMany({}, {$set: {updated_on: new Date()}})");
+db.student.updateMany({}, {$set: {updated_on: new Date()}})
+sleep(3000)
+
+print("\n******** Get all students ********");
+print("-------- Consigue todos los estudiantes --------\n");
+print("\nCommando: db.student.find()");
+db.student.find()
