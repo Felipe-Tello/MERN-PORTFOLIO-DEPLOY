@@ -16,7 +16,7 @@ class TodoJunto extends Component {
         const {edad} = this.state;
 
         return(
-                <div style={{border:"2px solid black",width:"15vw",height:"fit-content", display:"flex", flexDirection:"column", margin:"1% 0 1% 0", padding:"1%", borderRadius:"10px"}}> 
+                <div className="bgn-primary" style={{border:"2px solid black",width:"15vw",height:"fit-content", display:"flex", flexDirection:"column", margin:"0 1% 0 1%", padding:"1%", borderRadius:"10px"}}> 
                     <div style={{display:"flex",flexDirection:"column"}}>
                         <h3>{lastName}, {firstName}</h3>
                         <h5>Age: {edad}</h5>

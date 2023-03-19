@@ -29,20 +29,23 @@ const Dashboard = ({commonData1}) => {
         <div>
             <div className="Title">
                 <h2>{commonData1.title}</h2>
-                
                 <p>{commonData1.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core">
-                <ButtonLogout></ButtonLogout>
-                <h2>Welcome Back</h2>
-                <h3>{user.firstName}, {user.lastName}</h3>
-                <br />
-                <h2>Your data</h2>
-                <h3>First Name: {user.firstName}</h3>
-                <h3>Last Name: {user.lastName}</h3>
-                <h3>ID: {user._id}</h3>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code" style={{minWidth:"40%"}}>
+                    <div className="bgn-primary" style={{display:"flex", flexDirection:"column", alignItems:"center", padding:"5%"}}>
+                        <ButtonLogout></ButtonLogout>
+                        <h2>Welcome Back</h2>
+                        <h3>{user.firstName}, {user.lastName}</h3>
+                        <br />
+                        <h2>Your data</h2>
+                        <h3>First Name: {user.firstName}</h3>
+                        <h3>Last Name: {user.lastName}</h3>
+                        <h3>ID: {user._id}</h3>
+                    </div>
+                </div>
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

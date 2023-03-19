@@ -3,7 +3,7 @@ const CreandoHandShake = () => {
     return (
         <div>
             <div className="Title">
-                <h2>Creando el Hand Shake <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/7-%20SocketIO/1-%20SocketIO/1-%20Creating%20the%20Handshake"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>Creando el Hand Shake <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/7-%20SocketIO/1-%20SocketIO/1-%20Creating%20the%20Handshake"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>Entender el funcionamiento de Socket.io ademas de crear funciones para recibir y emitir datos.</p>
             </div>
             <div className="Disclaimer">

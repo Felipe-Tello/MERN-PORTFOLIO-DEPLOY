@@ -2,13 +2,15 @@ const UsandoMongoDB = () => {
     return (
         <div>
             <div className="Title">
-                <h2>Usando MongoDB <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/blob/main/4-%20MongoDB/1-%20MongoDB/1-%20Using%20MongoDB/UsingMongoDB.txt"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>Usando MongoDB <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/blob/main/4-%20MongoDB/1-%20MongoDB/1-%20Using%20MongoDB/UsingMongoDB.txt"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>Aprender a crear bases de datos, crear colecciones y hacer consultas a traves del shell de MongoDB</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/lOT6Ph8NDbg" title="Postman + Pokemon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/tJYF-z9IR-s" title="Usando MongoDB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

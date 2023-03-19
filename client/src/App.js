@@ -18,10 +18,10 @@ import FunctionalProgrammigRoutes from './components/routes/JavascriptFundamenta
 import AuthenticationRoutes from './components/routes/MERNAuth/AuthenticationRoutes';
 import SocketIORoutes from './components/routes/SocketIO/SocketIORoutes';
 
-import Home from './components/Home';
-import Footer from './components/Footer';
-import Superior from './components/Superior';
-import Lateral from './components/Lateral';
+import Home from './components/globals/Home';
+import Footer from './components/globals/Footer';
+import Superior from './components/globals/Superior';
+import Lateral from './components/globals/Lateral';
 import MERNCloudRoutes from './components/routes/MERNDeployment/MERNCloudRoutes';
 
 export const NavContext = createContext();
@@ -31,15 +31,17 @@ const App = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
   return (
-    <div>
+    <div style={{backgroundColor:"#1b1b1b"}}>
       <BrowserRouter>
       <NavContext.Provider value={selectedOption}>
-        <Superior onSelect={setSelectedOption}></Superior>
-        <div style={{ display: "flex", flexDirection: "row", width: "100%", justifyContent: "center", minHeight:"70vh"}}>
+        <div>
+          <Superior onSelect={setSelectedOption}></Superior>
+        </div>
+        <div style={{ display: "flex", flexDirection:"row", width: "100%", justifyContent: "center", minHeight:"79vh", marginBottom:"1%"}}>
           <div>
             <Lateral></Lateral>
           </div>
-          <div style={{ minWidth:'75%'}}>
+          <div className='bgn-primary' style={{ backgroundColor: "#303134", display:"flex", flexDirection:"column", justifyContent:"center", width:'75%', height:"fit-content", color:"white",borderRadius: "10px"}}>
             <Routes>
               <Route path='/*'>
                 <Route path="home" element={<Home />} />
@@ -64,7 +66,9 @@ const App = () => {
             </Routes>
           </div>
         </div>
-        <Footer></Footer>
+        <div>
+          <Footer></Footer>
+        </div>
       </NavContext.Provider>
       </BrowserRouter>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossOrigin="anonymous"></script>

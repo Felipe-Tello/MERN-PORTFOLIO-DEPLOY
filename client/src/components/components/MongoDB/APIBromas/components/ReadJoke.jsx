@@ -1,8 +1,8 @@
 const ReadJoke = ({ jokes }) => {
 
     return (
-        <div style={{ width: "100%", height:"33vh", overflow: "auto" }}>
-            <h2 style={{textAlign:"center"}}>Read Joke</h2>
+        <div className="bgn-primary" style={{ width: "100%", height:"33vh", overflow: "auto" }}>
+            <h2 style={{textAlign:"center", marginTop:"5%"}}>Read Joke</h2>
             <ul style={{paddingLeft: "0px"}}>
                 <div>
                 {jokes && (

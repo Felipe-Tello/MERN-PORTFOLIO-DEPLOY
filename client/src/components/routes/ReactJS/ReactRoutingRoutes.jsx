@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../../components/ReactJS/PracticaEnrutamiento/Home';
 import ParamsId from '../../components/ReactJS/PracticaEnrutamiento/ParamsId';
 import StarwarsAPI from '../../components/ReactJS/StarwarsAPI';
+import ReactRoutingIndex from '../../Introduction/2-ReactJS/5-ReactRoutingIndex';
 
 const ReactRoutingRoutes = () =>{
 
@@ -14,6 +15,7 @@ const ReactRoutingRoutes = () =>{
     return(
         <div>
             <Routes>
+                <Route path="/" element={<ReactRoutingIndex/>}/>
                 <Route path="/practica-de-enrutamiento" element={<Home commonData={commonData}/>}/>
                 <Route path="/practica-de-enrutamiento/:id" element={<ParamsId commonData={commonData}/>}/>
                 <Route path="/practica-de-enrutamiento/:id/:color/:bgcolor" element={<ParamsId commonData={commonData}/>}/>

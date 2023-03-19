@@ -6,6 +6,7 @@ import NewAuthor from '../../components/MERNAuth/AutoresJWT/NewAuthor';
 import UpdateAuthor from '../../components/MERNAuth/AutoresJWT/UpdateAuthor';
 import Dashboard from '../../components/MERNAuth/SimpleAuth/Dashboard';
 import Login from '../../components/MERNAuth/SimpleAuth/Login';
+import AuthenticationIndex from '../../Introduction/6-MERN Auth/1-AuthenticationIndex';
 
 const AuthenticationRoutes = () =>{
 
@@ -24,6 +25,7 @@ const AuthenticationRoutes = () =>{
     return(
         <div>
             <Routes>
+                <Route path="/" element={<AuthenticationIndex/>}/>
                 <Route path="/autenticacion-simple" element={<Login commonData1={commonData1}/>}/>
                 <Route path="/autenticacion-simple/dashboard" element={<Dashboard commonData1={commonData1}/>}/>
 

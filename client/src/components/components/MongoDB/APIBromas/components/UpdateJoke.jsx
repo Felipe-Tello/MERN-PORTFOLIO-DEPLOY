@@ -21,8 +21,8 @@ const UpdateJoke = ({ jokes, refreshJokes }) => {
     };
 
     return (
-        <div style={{ width: "100%", height:"33vh", overflow: "auto", marginBottom:"5%"}}>
-            <h2 style={{textAlign:"center"}}>Update Joke</h2>
+        <div className="bgn-primary" style={{ width: "100%", height:"33vh", overflow: "auto", marginBottom:"5%"}}>
+            <h2 style={{textAlign:"center", marginTop:"5%"}}>Update Joke</h2>
             {(jokes && !selectedJoke._id) ? (
                 <ul style={{paddingLeft: "0px"}}>
                     <div>

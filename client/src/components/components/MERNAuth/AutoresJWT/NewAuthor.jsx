@@ -42,7 +42,7 @@ const NewAuthor = ({commonData2}) => {
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core">
+            {/* <div className="Core">
                 <ButtonLogout></ButtonLogout>
                 <h2>Favorite authors</h2>
                 <Link to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Home</Link>
@@ -56,6 +56,33 @@ const NewAuthor = ({commonData2}) => {
                     <Link className="btn btn-warning" to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Cancel</Link>
                     <input type="submit" className="btn btn-success" value="Guardar" />
                 </form>
+            </div> */}
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"40%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div style={{textAlign:"center"}}>
+                            <ButtonLogout></ButtonLogout>
+                            <h2>Favorite authors</h2>
+                            <Link className="btn btn-success" to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Home</Link> 
+                        </div>
+                        <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+                            <form onSubmit={submitAutor}>
+                                <h4 style={{textAlign:"center"}}>Add a new author:</h4>
+                                <div className="form-group">
+                                    <label htmlFor="name">Name:</label>
+                                    <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+                                    {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
+                                </div>
+                                <div style={{display:"flex", justifyContent:"space-around", alignItems:"center", marginTop:"5%"}}>
+                                    <div>
+                                    <Link className="btn btn-warning" to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Cancel</Link>
+                                    </div>
+                                    <input style={{margin:"0"}} type="submit" className="btn btn-success" value="Guardar" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

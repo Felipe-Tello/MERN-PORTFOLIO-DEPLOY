@@ -11,6 +11,7 @@ import ShowPlayer from '../../components/FullStackMERN/TeamManagement/ShowPlayer
 import Dashboard3 from '../../components/FullStackMERN/RefactorizarReutilizarReciclar/Dashboard';
 import ShowProduct from '../../components/FullStackMERN/RefactorizarReutilizarReciclar/ShowProduct';
 import UpdateProduct from '../../components/FullStackMERN/RefactorizarReutilizarReciclar/UpdateProduct';
+import AdvancedMERNIndex from '../../Introduction/5-Full-Stack MERN/2-AdvancedMERNIndex';
 
 const AdvancedMERNRoutes = () =>{
 
@@ -41,6 +42,7 @@ const AdvancedMERNRoutes = () =>{
     return(
         <div>
             <Routes>
+                <Route path="/" element={<AdvancedMERNIndex/>}/>
                 <Route path="/refactorizar-reutilizar-reciclar" element={<Dashboard3 commonData1={commonData1}/>}/>
                 <Route path="/refactorizar-reutilizar-reciclar/:id" element={<ShowProduct commonData1={commonData1}/>}/>
                 <Route path="/refactorizar-reutilizar-reciclar/:id/edit" element={<UpdateProduct commonData1={commonData1}/>}/>
@@ -52,8 +54,8 @@ const AdvancedMERNRoutes = () =>{
 
                 <Route path="/administrador-de-equipo" element={<Dashboard2 commonData3={commonData3}/>}/>
                 <Route path="/administrador-de-equipo/players/addplayer" element={<NewPlayer commonData3={commonData3}/>}/>
-                <Route path="/administrador-de-equipo/players/:id" element={<ShowPlayer commonData3={commonData3}/>}/>
                 <Route path="/administrador-de-equipo/status/game/:id" element={<PlayerStatus commonData3={commonData3}/>}/>
+                <Route path="/administrador-de-equipo/players/:id" element={<ShowPlayer commonData3={commonData3}/>}/>
             </Routes>
         </div>
     )

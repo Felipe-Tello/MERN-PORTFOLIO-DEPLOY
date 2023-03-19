@@ -29,20 +29,22 @@ const APIBromas = () => {
     return (
         <div>
             <div className="Title">
-                <h2>API de bromas <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/4-%20MongoDB/2-%20Mongoose/1-%20Jokes%20API"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>API de bromas <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/4-%20MongoDB/2-%20Mongoose/1-%20Jokes%20API"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>Consolidar los conocimientos de mongoose y express creando un proyecto desde cero haciendo un API restful.</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code" style={{flexDirection:"column"}}>
-                <div style={{display:"flex", justifyContent:"space-around"}}>
-                    <div style={{width:"40%"}}>
-                        <CreateJoke refreshJokes={refreshJokes} />
-                        <ReadJoke jokes={jokes} />
-                    </div>
-                    <div style={{width:"40%"}}>
-                        <UpdateJoke jokes={jokes} refreshJokes={refreshJokes} />
-                        <DeleteJoke jokes={jokes} setJokes={setJokes} refreshJokes={refreshJokes} />
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code" style={{flexDirection:"column"}}>
+                    <div style={{display:"flex", justifyContent:"space-around"}}>
+                        <div style={{width:"40%"}}>
+                            <CreateJoke refreshJokes={refreshJokes} />
+                            <ReadJoke jokes={jokes} />
+                        </div>
+                        <div style={{width:"40%"}}>
+                            <UpdateJoke jokes={jokes} refreshJokes={refreshJokes} />
+                            <DeleteJoke jokes={jokes} setJokes={setJokes} refreshJokes={refreshJokes} />
+                        </div>
                     </div>
                 </div>
             </div>

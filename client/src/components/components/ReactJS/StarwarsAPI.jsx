@@ -109,30 +109,32 @@ const StarwarsAPI = (props) => {
     return (
         <div>
             <div className="Title">
-                <h2>Luke APIwalker <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/2-%20ReactJS/5-%20React%20routing/2-%20Luke%20APIwalker/client"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>Luke APIwalker <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/2-%20ReactJS/5-%20React%20routing/2-%20Luke%20APIwalker/client"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>Crear una aplicación para navegar por la <a href="https://pipedream.com/apps/swapi">API de Star Wars</a>.</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"40%", border:"2px solid black" , borderRadius:"10px", padding:"5%"}}>
-                    <form onSubmit={handleSubmit} onChange={handleOnChange}>
-                        <div>
-                            <select style={{width:"100%", textAlign:"center"}} id="categories" name="category">
-                                {catKeys.map((value, index) => {
-                                    return (
-                                        <option value={value} key={index}>{value}</option>
-                                    );
-                                })}
-                            </select>
-                        </div>
-                        <div style={{display:"flex", justifyContent:"space-between", marginTop:"5%"}}>
-                            <label>id:</label>
-                            <input style={{width:"95%"}} type="text" placeholder="id" name="id" />
-                        </div>
-                        <input style={{width:"100%"}} className="btn btn-success" type="submit" value="submit"></input>
-                    </form>
-                    <div id="div-result" style={{marginTop:"5%", display:"flex", justifyContent:"center"}}>{resultados()}</div>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"40%", border:"2px solid black" , borderRadius:"10px", padding:"5%"}}>
+                        <form onSubmit={handleSubmit} onChange={handleOnChange}>
+                            <div>
+                                <select style={{width:"100%", textAlign:"center"}} id="categories" name="category">
+                                    {catKeys.map((value, index) => {
+                                        return (
+                                            <option value={value} key={index}>{value}</option>
+                                        );
+                                    })}
+                                </select>
+                            </div>
+                            <div style={{display:"flex", justifyContent:"space-between", marginTop:"5%"}}>
+                                <label>id:</label>
+                                <input style={{width:"95%"}} type="text" placeholder="id" name="id" />
+                            </div>
+                            <input style={{width:"100%"}} className="btn btn-success" type="submit" value="submit"></input>
+                        </form>
+                        <div id="div-result" style={{marginTop:"5%", display:"flex", justifyContent:"center"}}>{resultados()}</div>
+                    </div>
                 </div>
             </div>
             <div className="Objectives">

@@ -33,14 +33,71 @@
 .App-link {
   color: #61dafb;
 }
-
 /* -------------------------- */
+.Font-background{
+  width: 7vw;
+  height: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:90px;
+}
+.Font-background:before{
+  content:'';
+  transition: all 0.7s; 
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 100px;
+  opacity: 1;  
+}
+.M:before{
+  background-image: url("../public/mongo-svgrepo-com.png");
+  background-position: center;
+  background-color: #525849;
+  background-size: cover;
+}
+.E:before{
+  background-image: url("../public/express-svgrepo-com.png");
+  background-position: center;
+  background-color: #cc7c70;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+.R:before{
+  background-image: url("../public/react-svgrepo-com.png");
+  background-position: center;
+  background-color: #275f8f;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+.N:before{
+  background-image: url("../public/icons8-node-js-512.png");
+  background-position: center;
+  background-color: #9ac04c;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+.Font-background:hover:before{
+  opacity: 0;
+}
+.Font-background:hover{
+  opacity: 1;
+}
+/* -------------------------- */
+.bgn-primary{
+  background-color: #282c34;
+  border-radius: 10px;
+}
+.bgn-second{
+  background-color: #303134;
+  border-radius: 10px;
+}
 html{
   scrollbar-gutter: stable;
   background-color: #282c34;
 }
 .Title{
-  border: 3px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,11 +109,20 @@ html{
 .Title p{
   padding: 1% 2% 1% 2%;
   word-wrap: break-word;
-  width: 75vw;
-  border: 3px solid orange;
+  width: 100%;
+  text-align: center;
+}
+.Title img{
+  border-radius: 50px;
 }
 .Core{
-  border: 3px solid yellow;
+  width: 90%;
+}
+.Core label{
+  color: gray;
+}
+.Core table a{
+  text-decoration: none;
 }
 .no-code{
   display: flex;
@@ -67,7 +133,6 @@ html{
   margin-bottom: 2%;
 }
 .Objectives{
-  border: 3px solid blue;
   padding: 1%;
 }
 .Objectives h3{
@@ -78,8 +143,8 @@ html{
   padding-left: 1%;
 }
 .Objectives input{
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 .Objectives label{
   margin-left: 1%;  
@@ -88,11 +153,18 @@ html{
   text-align: center;
 }
 /* -------------------------- */
+.home-table{
+  width: 100%;
+}
+.home-table td{
+  width: 25%;
+}
 .section-mandatory{
   color: #000;
   background-color: rgba(189,195,255,1);
   border: 2px solid black;
   width: 10vw;
+  height:3vh;
 }
 .section-practice{
   color: #000;
@@ -127,12 +199,13 @@ html{
 /* -------------------------- */
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #474747;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 30px;
 }
 
 .dropdown {
@@ -144,62 +217,78 @@ html{
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 15px;
   text-decoration: none;
   display: block;
+  transition: all 0.7s; 
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-clip: content-box;
+  box-shadow: inset 0 0 0 4px #474747,
+              inset 0 0 0 6px #5c5c5c,
+              inset 0 0 0 8px #747474,
+              inset 0 0 0 10px #8f8f8f,
+              inset 0 0 0 12px #b4b4b4,
+              inset 0 0 0 14px #c9c9c9,
+              inset 0 0 0 16px #dddddd;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* -------------------------- */
 
 .nav-pills .nav-link.active-mandatory, .nav-pills .show > .nav-link{
   color: #000;
-  border: 2px solid black;
   background: rgb(242,241,241);
   background: linear-gradient(90deg, rgba(242,241,241,1) 60%, rgba(189,195,255,1) 100%); 
 }
 
 .nav-pills .nav-link.active-practice, .nav-pills .show > .nav-link{
   color: #000000;
-  border: 2px solid black;
   background: rgb(242,241,241);
   background: linear-gradient(90deg, rgba(242,241,241,1) 60%, rgba(182,255,236,1) 100%); 
 }
 
 .nav-pills .nav-link.active-optional, .nav-pills .show > .nav-link{
   color: #000;
-  border: 2px solid black;
   background: rgb(242,241,241);
   background: linear-gradient(90deg, rgba(242,241,241,1) 60%, rgba(227,255,178,1) 100%); 
 }
 
 .nav-pills .nav-link.active-original, .nav-pills .show > .nav-link{
   color: #000;
-  border: 2px solid black;
   background: rgb(242,241,241);
   background: linear-gradient(90deg, rgba(242,241,241,1) 60%, rgba(255,215,179,1) 100%); 
 }
 
+.nav-pills .nav-link{
+  color: #ffffff;
+}
+
 .dropdown:hover > .dropdown-menu {
   display: block;
-  margin-top: 0; /* remove the gap so it doesn't close */
+  margin-top: 0;
 }
+/* -------------------------- */
+/* ------------Theme Color-------------- */
+
 
 /* -------------------------- */
 

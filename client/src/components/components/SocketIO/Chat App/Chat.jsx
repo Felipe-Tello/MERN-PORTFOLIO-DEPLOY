@@ -29,11 +29,11 @@ function Chat({socket, username, room}) {
     }, [socket]);
 
     return (
-        <div>
+        <div className='bgn-primary' style={{padding:"5%", minHeight:"20vh"}}>
             <div>
-                <p>Live Chat</p>
+                <p style={{textAlign:"center"}}>Live Chat</p>
             </div>
-            <div>
+            <div style={{overflow:"auto", maxHeight:"35vh"}}>
                 {messageList.map((messageContent, index) => {
                     return ( 
                     <div key={index} id={username === messageContent.sender ? "you" : "other"}>
@@ -51,10 +51,10 @@ function Chat({socket, username, room}) {
                 })}
             </div>
             <div>
-                <input type="text" placeholder="your message" value={currentMessage} onChange={(event) => {setCurrentMessage(event.target.value)}} onKeyPress={(event) => {event.key === "Enter" && sendMessage();}}/>
-                <button onClick={sendMessage}>Send</button>
+                <input style={{borderRadius:"10px"}} type="text" placeholder="your message" value={currentMessage} onChange={(event) => {setCurrentMessage(event.target.value)}} onKeyPress={(event) => {event.key === "Enter" && sendMessage();}}/>
+                <button style={{borderRadius:"200px"}} onClick={sendMessage}><img width={30} height={30} src="https://cdn.iconscout.com/icon/free/png-512/send-1779879-1518531.png?f=avif&w=256" alt="" /></button>
             </div>
-            <p><a href='/socketio/chat-app'>Exit Chat Room</a></p>
+            <p style={{textAlign:"center"}}><a href='/socketio/chat-app'>Exit Chat Room</a></p>
         </div>
     )
 }

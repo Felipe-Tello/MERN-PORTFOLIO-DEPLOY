@@ -50,7 +50,7 @@ const Dashboard = ({commonData2}) => {
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core">
+            {/* <div className="Core">
                 <ButtonLogout></ButtonLogout>
                 <h2>Favorite authors</h2>
                 <Link to={`/authentication/autores-con-bcrypt-jwt/new`}>Add an author</Link>
@@ -74,6 +74,38 @@ const Dashboard = ({commonData2}) => {
                         ))}
                     </tbody>
                 </table>
+            </div> */}
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", flexDirection:"column", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div style={{textAlign:"center"}}>
+                            <ButtonLogout></ButtonLogout>
+                            <h2>Favorite authors</h2>
+                            <Link className="btn btn-success" to={`/authentication/autores-con-bcrypt-jwt/new`}>Add an author</Link>
+                        </div>
+                        <div>
+                            <h4>We have quotes by:</h4>
+                            <table class="table table-dark table-striped table-bordered border-light">
+                                <thead>
+                                    <tr>
+                                        <th>Author</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {sortedAuthorsList.map((author, index)=> (
+                                    <tr key={index}>
+                                        <td>{author.name}</td>
+                                        <td><Link className="btn btn-warning" to={`/authentication/autores-con-bcrypt-jwt/edit/${author._id}`}>Edit</Link></td>
+                                        <td><button className="btn btn-danger" onClick={() => deleteAuthor(author._id)}>Delete</button></td>
+                                    </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

@@ -23,34 +23,38 @@ const NewPlayer = ({commonData3}) => {
     return (
         <div>
             <div className="Title">
-                <h2>{commonData3.title} <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/3-%20Team%20Manager"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
+                <h2>{commonData3.title} <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/3-%20Team%20Manager"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
                 <p>{commonData3.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"70%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                    <div style={{display:"flex", flexDirection:"column", marginBottom:"10%"}}>
-                        <h5 style={{textAlign:"center"}}><Link style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none"}} to={`/advanced-mern/administrador-de-equipo`}>Manage Players</Link> <Link style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}>Manage Player Status</Link></h5>
-                    </div>
-                    <div>
-                        <h5 style={{display:"flex", justifyContent:"space-between", marginBottom:"5%"}}><Link to={`/advanced-mern/administrador-de-equipo`}>List</Link> <Link to={`/advanced-mern/administrador-de-equipo/players/addplayer`}>Add Player</Link></h5>
-                    </div>
-                    <h4 style={{textAlign:"center"}}>Add Player</h4> 
-                    <form onSubmit={submitPlayer}>
-                        <div className="form-group">
-                            <label htmlFor="name">Player Name:</label>
-                            {name.length >0 && name.length <2 ? <p style={{color:"red"}}>Name must have at least 2 characters</p> : <></>}
-                            <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
-                            {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"70%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div style={{display:"flex", flexDirection:"column", marginBottom:"10%"}}>
+                            <h5 style={{textAlign:"center"}}><Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo`}>Manage Players</Link> <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}>Manage Player Status</Link></h5>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="position">Preferred Position:</label>
-                            <input id="position" name="position" type="text" className="form-control" value={position} onChange={(e) => setPosition(e.target.value)} />
+                        <div>
+                            <h5 style={{display:"flex", justifyContent:"space-between", marginBottom:"5%"}}><Link to={`/advanced-mern/administrador-de-equipo`}><button className="btn btn-light">List</button></Link> <Link to={`/advanced-mern/administrador-de-equipo/players/addplayer`}><button className="btn btn-light">Add Player</button></Link></h5>
                         </div>
-                        <Link className="btn btn-warning" to={`/advanced-mern/administrador-de-equipo`}>Cancel</Link>
-                        <input style={{margin:"0"}} type="submit" disabled={name.length <2} className="btn btn-success" value="Guardar" />
-                    </form>
+                        <h4 style={{textAlign:"center"}}>Add Player</h4> 
+                        <form onSubmit={submitPlayer}>
+                            <div className="form-group">
+                                <label htmlFor="name">Player Name:</label>
+                                {name.length >0 && name.length <2 ? <p style={{color:"red"}}>Name must have at least 2 characters</p> : <></>}
+                                <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+                                {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="position">Preferred Position:</label>
+                                <input id="position" name="position" type="text" className="form-control" value={position} onChange={(e) => setPosition(e.target.value)} />
+                            </div>
+                            <div style={{display:"flex", justifyContent:"space-around"}}>
+                                <Link className="btn btn-warning" to={`/advanced-mern/administrador-de-equipo`}>Cancel</Link>
+                                <input style={{margin:"0"}} type="submit" disabled={name.length <2} className="btn btn-success" value="Guardar" />
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div className="Objectives">

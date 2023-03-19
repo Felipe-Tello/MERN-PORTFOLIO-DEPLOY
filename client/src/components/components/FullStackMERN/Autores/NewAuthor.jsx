@@ -22,30 +22,34 @@ const NewAuthor = ({commonData2}) => {
     return (
         <div>
             <div className="Title">
-                <h2>{commonData2.title} <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/2-%20Authors"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
+                <h2>{commonData2.title} <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/2-%20Authors"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
                 <p>{commonData2.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"40%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                    <div style={{textAlign:"center"}}>
-                        <h2>Favorite authors</h2>
-                        <Link className="btn btn-success" to={`/advanced-mern/autores/`}>Home</Link> 
-                    </div>
-                    <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
-                        <form onSubmit={submitAutor}>
-                            <h4>Add a new author:</h4>
-                            <div className="form-group">
-                                <label htmlFor="name">Name:</label>
-                                <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
-                                {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
-                            </div>
-                            <div style={{justifyContent:"center", alignItems:"center"}}>
-                                <Link className="btn btn-warning" to={`/advanced-mern/autores/`}>Cancel</Link>
-                                <input style={{margin:"0"}} type="submit" className="btn btn-success" value="Guardar" />
-                            </div>
-                        </form>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"40%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div style={{textAlign:"center"}}>
+                            <h2>Favorite authors</h2>
+                            <Link className="btn btn-success" to={`/advanced-mern/autores/`}>Home</Link> 
+                        </div>
+                        <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+                            <form onSubmit={submitAutor}>
+                                <h4 style={{textAlign:"center"}}>Add a new author:</h4>
+                                <div className="form-group">
+                                    <label htmlFor="name">Name:</label>
+                                    <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+                                    {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
+                                </div>
+                                <div style={{display:"flex", justifyContent:"space-around", alignItems:"center", marginTop:"5%"}}>
+                                    <div>
+                                    <Link className="btn btn-warning" to={`/advanced-mern/autores/`}>Cancel</Link>
+                                    </div>
+                                    <input style={{margin:"0"}} type="submit" className="btn btn-success" value="Guardar" />
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

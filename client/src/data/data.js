@@ -1,5 +1,5 @@
 export const content = [
-    { value: 'Home', section:{}},
+    // { value: 'Home', section:{}},
     { value: 'Javascript Fundamentals', section:{
         "Fundamentals":["Hoist de JavaScript", "Predecir la desestructuración", "Convertir a flecha", "Cuánto tiempo tomó", "Ordenamiento Rápido"],
         "OOP":["Ninja", "Super Ninja", "Es Hora de Duelo"],
@@ -16,7 +16,7 @@ export const content = [
         "MongoDB":["Usando MongoDB"],
         "Mongoose":["API de bromas"]}},
     { value: 'Full-Stack MERN', section:{
-        "Full Stack MERN":["Administrador de Producto Parte 1", "Administrador de Producto Parte 2", "Administrador de Producto Parte 3"],
+        "Full Stack MERN":["Administrador de Productos Parte 1", "Administrador de Productos Parte 2", "Administrador de Productos Parte 3"],
         "Advanced MERN":["Refactorizar, reutilizar, reciclar","Autores", "Administrador de equipo"]}},
     { value: 'MERN Auth', section:{
         "Authentication":["Autenticación simple","Autores con Bcrypt JWT"]}},
@@ -27,8 +27,8 @@ export const content = [
 ];
 
 export const priority = [
-    { value: 'mandatory', section:["Predecir la desestructuración","Convertir a flecha","Super Ninja","Primer React con JXS","Poniendo todo junto","Más formularios","Lista de quehaceres","Axios Pokemon API","Luke APIwalker","API falsa","API de bromas","Administrador de Producto Parte 2","Administrador de Producto Parte 3","Autores"]},
-    { value: 'practice', section:["Hoist de JavaScript","Ninja","Primer React","Apoyalo","Gran inversión","Formulario con Hooks","Generador de caja","Pestañas","Pokemon API","Práctica de enrutamiento","Postman + Pokemon","Usando MongoDB","Administrador de Producto Parte 1","Administrador de equipo","Creando el Handshake","Chat App"]},
+    { value: 'mandatory', section:["Predecir la desestructuración","Convertir a flecha","Super Ninja","Primer React con JXS","Poniendo todo junto","Más formularios","Lista de quehaceres","Axios Pokemon API","Luke APIwalker","API falsa","API de bromas","Administrador de Productos Parte 2","Administrador de Productos Parte 3","Autores"]},
+    { value: 'practice', section:["Hoist de JavaScript","Ninja","Primer React","Apoyalo","Gran inversión","Formulario con Hooks","Generador de caja","Pestañas","Pokemon API","Práctica de enrutamiento","Postman + Pokemon","Usando MongoDB","Administrador de Productos Parte 1","Administrador de equipo","Creando el Handshake","Chat App"]},
     { value: 'optional', section:["Cuánto tiempo tomó","Ordenamiento Rápido","Es Hora de Duelo","Object Master","React Blocks","Validación de formulario","Contexto Navbar","Lanzar Monedas","Refactorizar, reutilizar, reciclar"]},
     { value: 'original', section:["Autenticación simple","Autores con Bcrypt JWT","Amazon Web Services", "Microsoft Azure", "Google Cloud Plataform", "Oracle Cloud"]}
 ];

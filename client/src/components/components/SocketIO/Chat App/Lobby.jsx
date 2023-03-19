@@ -25,23 +25,25 @@ const Lobby = () => {
     return (
         <div>
             <div className="Title">
-                <h2>Chat App <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/7-%20SocketIO/1-%20SocketIO/2-%20Chat%20App"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>Chat App <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/7-%20SocketIO/1-%20SocketIO/2-%20Chat%20App"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>LLevar a la practica lo aprendido acerca de Socket.io creando una aplicacion de mensajeria.</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className='core'>
-            {!showChat ? (
-                <div>
-                    <h3>Join A Chat</h3>
-                    <input type="text" placeholder="name..." onChange={(event) => {setUsername(event.target.value)}}/>
-                    <input type="text" placeholder="Room iD..." onChange={(event) => {setRoom(event.target.value)}}/>
-                    <button onClick={joinRoom}>Join A room</button>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className='Core no-code'>
+                {!showChat ? (
+                    <div className="bgn-primary" style={{padding:"5%"}}>
+                        <h3 style={{textAlign:"center"}}>Join A Chat</h3>
+                        <input type="text" placeholder="name..." onChange={(event) => {setUsername(event.target.value)}}/>
+                        <input type="text" placeholder="Room iD..." onChange={(event) => {setRoom(event.target.value)}}/>
+                        <button onClick={joinRoom}>Join A room</button>
+                    </div>
+                    )
+                    : (
+                    <Chat socket={socket} username={username} room={room}/>
+                    )}
                 </div>
-                )
-                : (
-                <Chat socket={socket} username={username} room={room}/>
-                )}
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

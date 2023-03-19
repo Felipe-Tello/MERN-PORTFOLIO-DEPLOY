@@ -11,8 +11,8 @@ const DeleteJoke = ({ jokes, setJokes, refreshJokes }) => {
     }
 
     return (
-        <div style={{ width: "100%", height:"33vh", overflow: "auto"  }}>
-            <h2 style={{textAlign:"center"}}>Delete Joke</h2>
+        <div className="bgn-primary" style={{ width: "100%", height:"33vh", overflow: "auto"  }}>
+            <h2 style={{textAlign:"center", marginTop:"5%"}}>Delete Joke</h2>
             <ul style={{paddingLeft: "0px"}}>
                 <div>
                 {jokes && (

@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav style={{border:"1px black solid", textAlign:"end", marginBottom:"5%", padding:"5%"}}>Hi {name}!</nav>
+            <nav className='bgn-second' style={{border:"1px black solid", textAlign:"end", marginBottom:"5%", padding:"5%"}}>Hi {name}!</nav>
         </div>
     );
 }

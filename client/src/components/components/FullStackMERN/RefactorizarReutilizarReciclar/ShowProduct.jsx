@@ -24,34 +24,26 @@ const ShowProduct = ({commonData1}) => {
     return(
         <div>
             <div className="Title">
-                <h2>{commonData1.title} <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/1-%20Refactor%20Reuse%20Recycle"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>               
+                <h2>{commonData1.title} <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/1-%20Refactor%20Reuse%20Recycle"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>               
                 <p>{commonData1.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"30%", display:"flex", flexDirection:"column",  justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                    <Link style={{marginBottom:"5%"}} to="/advanced-mern/refactorizar-reutilizar-reciclar" className="btn btn-primary">Back to home</Link>
-                    <div style={{textAlign:"center"}}>
-                        <h1>{product.title}</h1>
-                        <h2>${product.price}</h2>
-                        <h4>{product.description}</h4>
-                        <div>
-                            <Link className="btn btn-warning" to={`/advanced-mern/refactorizar-reutilizar-reciclar/${product._id}/edit`}>Edit</Link>
-                            <DeleteButton productId={product._id} successCallback={()=>remove()}/>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"30%", display:"flex", flexDirection:"column",  justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <Link style={{marginBottom:"5%"}} to="/advanced-mern/refactorizar-reutilizar-reciclar" className="btn btn-primary">Back to home</Link>
+                        <div style={{textAlign:"center"}}>
+                            <h1>{product.title}</h1>
+                            <h2>${product.price}</h2>
+                            <h4>{product.description}</h4>
+                            <div>
+                                <Link className="btn btn-warning" to={`/advanced-mern/refactorizar-reutilizar-reciclar/${product._id}/edit`}>Edit</Link>
+                                <DeleteButton productId={product._id} successCallback={()=>remove()}/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {/* <h1>{product.title}</h1>
-                <h2>${product.price}</h2>
-                <p>
-                    {product.description}
-                </p>
-                <div>
-                    <Link className="btn btn-warning" to={`/advanced-mern/refactorizar-reutilizar-reciclar/${product._id}/edit`}>Edit</Link>
-                    <DeleteButton productId={product._id} successCallback={()=>remove()}/>
-                </div>
-                <Link to="/advanced-mern/refactorizar-reutilizar-reciclar" className="btn btn-primary">Back to home</Link> */}
             </div>
             <div className="Objectives">
                 <h3>Lista de Objetivos</h3>

@@ -20,19 +20,21 @@ const FormJoke = ({ refreshJokes }) => {
     }
 
     return (
-        <div style={{width:"100%", height:"33vh", overflow: "auto", marginBottom:"5%"}}>
-            <h2 style={{textAlign:"center"}}>Create Joke</h2>
-            <form onSubmit={submitJoke}>
-                <div style={{marginTop:"5vh"}} className="form-group">
-                    <label htmlFor="setup">Setup:</label>
-                    <input id="setup" name="setup" type="text" className="form-control" value={setup} onChange={(e) => setSetup(e.target.value)} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="punchLine">PunchLine:</label>
-                    <input id="punchLine" name="punchLine" type="text" className="form-control" value={punchLine} onChange={(e) => setPunchLine(e.target.value)} />
-                </div>
-                <input type="submit" className="btn btn-success" value="Create" />
-            </form>
+        <div className="bgn-primary" style={{width:"100%", height:"33vh", overflow: "auto", marginBottom:"5%"}}>
+            <h2 style={{textAlign:"center", marginTop:"5%"}}>Create Joke</h2>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <form onSubmit={submitJoke}>
+                    <div style={{marginTop:"5%"}} className="form-group">
+                        <label htmlFor="setup">Setup:</label>
+                        <input id="setup" name="setup" type="text" className="form-control" value={setup} onChange={(e) => setSetup(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="punchLine">PunchLine:</label>
+                        <input id="punchLine" name="punchLine" type="text" className="form-control" value={punchLine} onChange={(e) => setPunchLine(e.target.value)} />
+                    </div>
+                    <input type="submit" className="btn btn-success" value="Create" />
+                </form>
+            </div>
         </div>
     );
 }

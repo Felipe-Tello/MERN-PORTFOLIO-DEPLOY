@@ -29,20 +29,22 @@ const Dashboard = ({commonData1}) => {
     return (
         <div>
             <div className="Title">
-                <h2>{commonData1.title} <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/1-%20Refactor%20Reuse%20Recycle"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
+                <h2>{commonData1.title} <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/5-%20Full-Stack%20MERN/2-%20Advanced%20MERN/1-%20Refactor%20Reuse%20Recycle"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>                
                 <p>{commonData1.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                    <div style={{width:"50%"}}>
-                        <h1>New Product</h1>
-                        <FormProduct onSubmitProp={submitProduct} initialTitle='' initialPrice='' initialDescription='' ></FormProduct>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div style={{width:"50%"}}>
+                            <h1>New Product</h1>
+                            <FormProduct onSubmitProp={submitProduct} initialTitle='' initialPrice='' initialDescription='' ></FormProduct>
+                        </div>
+                        {loaded &&(
+                        <List products={productsList} setProducts={setProductsList}></List>
+                        )}
                     </div>
-                    {loaded &&(
-                    <List products={productsList} setProducts={setProductsList}></List>
-                    )}
                 </div>
             </div>
             <div className="Objectives">

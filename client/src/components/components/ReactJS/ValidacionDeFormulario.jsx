@@ -81,41 +81,43 @@ const ValidacionDeFormulario = () => {
     return (
         <div>
             <div className="Title">
-                <h2>Validación de formularios con useReducer <a target="_blank" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/2-%20ReactJS/3-%20Functional%20components/4-%20Form%20validation/client"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
+                <h2>Validación de formularios con useReducer <a target="_blank" rel="noreferrer" href="https://github.com/Felipe-Tello/Coding-Dojo-MERN/tree/main/2-%20ReactJS/3-%20Functional%20components/4-%20Form%20validation/client"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width={50} height={50} alt="GitHub logo"/></a></h2>
                 <p>Validar el formulario a medida que el usuario escribe en los controles de entrada usando el Hook de useReducer().</p>
             </div>
             <div className="Disclaimer">
             </div>
-            <div className="Core no-code">
-                <div style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                    <h4 style={{textAlign:"center"}}>Form Data</h4>
-                    <form onSubmit={handleSubmit}>
-                        <div class="form-floating">
-                            <input type="text" name="firstName" className={state.firstName.value.length === 0 ? "form-control" : state.firstName.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.firstName.value}/>
-                            <label>First Name</label>
-                            {state.firstName.error !== null && (<div className="invalid-feedback">{state.firstName.error}</div>)}
-                        </div>
-                        <div class="form-floating">
-                            <input type="text" name="lastName" className={state.lastName.value.length === 0 ? "form-control" : state.lastName.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.lastName.value}/>
-                            <label>Last Name</label>
-                            {state.lastName.error !== null && (<div className="invalid-feedback">{state.lastName.error}</div>)}
-                        </div>
-                        <div class="form-floating">
-                            <input type="email" name="email" className={state.email.value.length === 0 ? "form-control" : state.email.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.email.value}/>
-                            <label>Email</label>
-                            {state.email.error !== null && (<div className="invalid-feedback">{state.email.error}</div>)}
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" name="password" className={state.password.value.length === 0 ? "form-control" : state.password.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.password.value}/>
-                            <label>Password</label>
-                            {state.password.error !== null && (<div className="invalid-feedback">{state.password.error}</div>)}
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" name="passwordCon" className={state.passwordCon.value.length === 0 ? "form-control" : state.passwordCon.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.passwordCon.value}/>
-                            <label>Confirm Password</label>
-                            {state.passwordCon.error !== null && (<div className="invalid-feedback">{state.passwordCon.error}</div>)}
-                        </div>
-                    </form>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <div className="Core no-code">
+                    <div className='bgn-primary' style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <h4 style={{textAlign:"center"}}>Form Data</h4>
+                        <form onSubmit={handleSubmit}>
+                            <div class="form-floating">
+                                <input type="text" name="firstName" className={state.firstName.value.length === 0 ? "form-control" : state.firstName.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.firstName.value}/>
+                                <label>First Name</label>
+                                {state.firstName.error !== null && (<div className="invalid-feedback">{state.firstName.error}</div>)}
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" name="lastName" className={state.lastName.value.length === 0 ? "form-control" : state.lastName.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.lastName.value}/>
+                                <label>Last Name</label>
+                                {state.lastName.error !== null && (<div className="invalid-feedback">{state.lastName.error}</div>)}
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" name="email" className={state.email.value.length === 0 ? "form-control" : state.email.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.email.value}/>
+                                <label>Email</label>
+                                {state.email.error !== null && (<div className="invalid-feedback">{state.email.error}</div>)}
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" name="password" className={state.password.value.length === 0 ? "form-control" : state.password.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.password.value}/>
+                                <label>Password</label>
+                                {state.password.error !== null && (<div className="invalid-feedback">{state.password.error}</div>)}
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" name="passwordCon" className={state.passwordCon.value.length === 0 ? "form-control" : state.passwordCon.error !== null ? "form-control is-invalid" : "form-control is-valid"} placeholder="placeholder" onChange={handleChange} value={state.passwordCon.value}/>
+                                <label>Confirm Password</label>
+                                {state.passwordCon.error !== null && (<div className="invalid-feedback">{state.passwordCon.error}</div>)}
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div className="Objectives">
