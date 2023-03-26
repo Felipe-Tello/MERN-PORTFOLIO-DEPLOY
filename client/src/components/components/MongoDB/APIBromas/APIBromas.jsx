@@ -4,6 +4,7 @@ import ReadJoke from "./components/ReadJoke";
 import UpdateJoke from "./components/UpdateJoke";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styles from '../MongoDB.module.css';
 
 const APIBromas = () => {
 
@@ -36,12 +37,12 @@ const APIBromas = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code" style={{flexDirection:"column"}}>
-                    <div style={{display:"flex", justifyContent:"space-around"}}>
-                        <div style={{width:"40%"}}>
+                    <div className={`${styles.JokeApiContainer}`}>
+                        <div className={`${styles.JokeApiBlock}`}>
                             <CreateJoke refreshJokes={refreshJokes} />
                             <ReadJoke jokes={jokes} />
                         </div>
-                        <div style={{width:"40%"}}>
+                        <div className={`${styles.JokeApiBlock}`}>
                             <UpdateJoke jokes={jokes} refreshJokes={refreshJokes} />
                             <DeleteJoke jokes={jokes} setJokes={setJokes} refreshJokes={refreshJokes} />
                         </div>

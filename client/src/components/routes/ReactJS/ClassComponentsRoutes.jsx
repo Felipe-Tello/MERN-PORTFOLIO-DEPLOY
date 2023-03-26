@@ -7,6 +7,7 @@ import Navigation from '../../components/ReactJS/ReactBlocks/Navigation';
 import SubContents from '../../components/ReactJS/ReactBlocks/SubContents';
 import TodoJunto from '../../components/ReactJS/TodoJunto';
 import ClassComponentsIndex from '../../Introduction/2-ReactJS/2-ClassComponentsIndex';
+import styles from '../Routes.module.css' ;
 
 const ClassComponentsRoutes = () => {
     return ( 
@@ -23,7 +24,7 @@ const ClassComponentsRoutes = () => {
                         </div>
                         <div style={{display:"flex", justifyContent:"center"}}>
                             <div className="Core no-code">
-                                <div style={{width:"80%", display:"flex", textAlign:"center"}}>
+                                <div className={`${styles.mediaFlexContainer}`}>
                                     <Apoyalo firstName="Jane" lastName="Doe" age={45} hairColor="Black"></Apoyalo>
                                     <Apoyalo firstName="John" lastName="Smith" age={88} hairColor="Brown"></Apoyalo>
                                     <Apoyalo firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown"></Apoyalo>
@@ -54,7 +55,7 @@ const ClassComponentsRoutes = () => {
                         </div>
                         <div style={{display:"flex", justifyContent:"center"}}>
                             <div className="Core no-code">
-                                <div style={{width:"80%", display:"flex", justifyContent:"space-evenly", textAlign:"center"}}>
+                                <div className={`${styles.mediaFlexContainer}`} >
                                     <TodoJunto firstName="Jane" lastName="Doe" age={45} hairColor="Black"></TodoJunto>
                                     <TodoJunto firstName="John" lastName="Smith" age={88} hairColor="Brown"></TodoJunto>
                                     <TodoJunto firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown"></TodoJunto>

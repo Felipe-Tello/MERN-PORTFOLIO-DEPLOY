@@ -23,6 +23,7 @@ import Footer from './components/globals/Footer';
 import Superior from './components/globals/Superior';
 import Lateral from './components/globals/Lateral';
 import MERNCloudRoutes from './components/routes/MERNDeployment/MERNCloudRoutes';
+import ConditionalView from './components/globals/ConditionalView';
 
 export const NavContext = createContext();
 
@@ -38,33 +39,66 @@ const App = () => {
           <Superior onSelect={setSelectedOption}></Superior>
         </div>
         <div style={{ display: "flex", flexDirection:"row", width: "100%", justifyContent: "center", minHeight:"79vh", marginBottom:"1%"}}>
-          <div>
-            <Lateral></Lateral>
-          </div>
-          <div className='bgn-primary' style={{ backgroundColor: "#303134", display:"flex", flexDirection:"column", justifyContent:"center", width:'75%', height:"fit-content", color:"white",borderRadius: "10px"}}>
-            <Routes>
-              <Route path='/*'>
-                <Route path="home" element={<Home />} />
-                <Route path='fundamentals/*' element={<FundamentalsRoutes />}></Route>
-                <Route path='oop/*' element={<OopRoutes />}></Route>
-                <Route path='functional-programming/*' element={<FunctionalProgrammigRoutes />}></Route>
-                <Route path='intro-to-react/*' element={<IntroToReactRoutes />}></Route>
-                <Route path='class-components/*' element={<ClassComponentsRoutes />}></Route>
-                <Route path='functional-components/*' element={<FunctionalComponentsRoutes />}></Route>
-                <Route path='apis/*' element={<APIsRoutes />}></Route>
-                <Route path='react-routing/*' element={<ReactRoutingRoutes />}></Route>
-                <Route path='express/*' element={<ExpressRoutes />}></Route>
-                <Route path='full-stack-mern/*' element={<FullStackMERNRoutes />}></Route>
-                <Route path='advanced-mern/*' element={<AdvancedMERNRoutes />}></Route>
-                <Route path='mongoose/*' element={<MongooseRoutes />}></Route>
-                <Route path='mongodb/*' element={<MongoDBRoutes />}></Route>
-                <Route path='authentication/*' element={<AuthenticationRoutes />}></Route>
-                <Route path='socketio/*' element={<SocketIORoutes />}></Route>
-                <Route path='deployment/*' element={<MERNCloudRoutes />}></Route>
-              </Route>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </div>
+          
+          <ConditionalView maxWidth={9999} minWidth={1200}>
+            <div>
+              <Lateral></Lateral>
+            </div>
+          </ConditionalView>
+
+          <ConditionalView maxWidth={9999} minWidth={1200}>
+            <div className='bgn-primary' style={{ backgroundColor: "#303134", display:"flex", flexDirection:"column", justifyContent:"center", width:'75%', height:"fit-content", color:"white",borderRadius: "10px"}}>
+              <Routes>
+                <Route path='/*'>
+                  <Route path="home" element={<Home />} />
+                  <Route path='fundamentals/*' element={<FundamentalsRoutes />}></Route>
+                  <Route path='oop/*' element={<OopRoutes />}></Route>
+                  <Route path='functional-programming/*' element={<FunctionalProgrammigRoutes />}></Route>
+                  <Route path='intro-to-react/*' element={<IntroToReactRoutes />}></Route>
+                  <Route path='class-components/*' element={<ClassComponentsRoutes />}></Route>
+                  <Route path='functional-components/*' element={<FunctionalComponentsRoutes />}></Route>
+                  <Route path='apis/*' element={<APIsRoutes />}></Route>
+                  <Route path='react-routing/*' element={<ReactRoutingRoutes />}></Route>
+                  <Route path='express/*' element={<ExpressRoutes />}></Route>
+                  <Route path='full-stack-mern/*' element={<FullStackMERNRoutes />}></Route>
+                  <Route path='advanced-mern/*' element={<AdvancedMERNRoutes />}></Route>
+                  <Route path='mongoose/*' element={<MongooseRoutes />}></Route>
+                  <Route path='mongodb/*' element={<MongoDBRoutes />}></Route>
+                  <Route path='authentication/*' element={<AuthenticationRoutes />}></Route>
+                  <Route path='socketio/*' element={<SocketIORoutes />}></Route>
+                  <Route path='deployment/*' element={<MERNCloudRoutes />}></Route>
+                </Route>
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </div>
+          </ConditionalView>
+
+          <ConditionalView maxWidth={1199} minWidth={0}>
+            <div className='bgn-primary' style={{ backgroundColor: "#303134", display:"flex", flexDirection:"column", justifyContent:"center", width:'95%', height:"fit-content", color:"white", borderRadius: "10px"}}>
+              <Routes>
+                <Route path='/*'>
+                  <Route path="home" element={<Home />} />
+                  <Route path='fundamentals/*' element={<FundamentalsRoutes />}></Route>
+                  <Route path='oop/*' element={<OopRoutes />}></Route>
+                  <Route path='functional-programming/*' element={<FunctionalProgrammigRoutes />}></Route>
+                  <Route path='intro-to-react/*' element={<IntroToReactRoutes />}></Route>
+                  <Route path='class-components/*' element={<ClassComponentsRoutes />}></Route>
+                  <Route path='functional-components/*' element={<FunctionalComponentsRoutes />}></Route>
+                  <Route path='apis/*' element={<APIsRoutes />}></Route>
+                  <Route path='react-routing/*' element={<ReactRoutingRoutes />}></Route>
+                  <Route path='express/*' element={<ExpressRoutes />}></Route>
+                  <Route path='full-stack-mern/*' element={<FullStackMERNRoutes />}></Route>
+                  <Route path='advanced-mern/*' element={<AdvancedMERNRoutes />}></Route>
+                  <Route path='mongoose/*' element={<MongooseRoutes />}></Route>
+                  <Route path='mongodb/*' element={<MongoDBRoutes />}></Route>
+                  <Route path='authentication/*' element={<AuthenticationRoutes />}></Route>
+                  <Route path='socketio/*' element={<SocketIORoutes />}></Route>
+                  <Route path='deployment/*' element={<MERNCloudRoutes />}></Route>
+                </Route>
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </div>
+          </ConditionalView>
         </div>
         <div>
           <Footer></Footer>

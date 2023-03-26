@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import styles from '../Auth.module.css';
 
 const Login = ({commonData2}) => {
 
@@ -62,8 +63,8 @@ const Login = ({commonData2}) => {
             <div className="Disclaimer">
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
-                <div className="Core no-code" style={{display:"flex", justifyContent:"space-around"}}>
-                    <div className="bgn-primary" style={{width:"40%", padding:"5%"}}>
+                <div className={`${styles.loginContainer} Core no-code`}>
+                    <div className={`${styles.registerLogin} bgn-primary`}>
                         <h2 style={{textAlign:"center"}}>Registration</h2>
                         <form onSubmit={registro}>
                             <div className="form-group">
@@ -94,7 +95,7 @@ const Login = ({commonData2}) => {
                             <input type="submit" value="Register" className="btn btn-primary" />
                         </form>
                     </div>
-                    <div className="bgn-primary" style={{width:"40%", padding:"5%", height:"60%"}}>
+                    <div className={`${styles.registerLogin} bgn-primary`} style={{height:"60%"}}>
                         <h2 style={{textAlign:"center"}}>Log in</h2>
                         <form onSubmit={login}>
                             <div className="form-group">

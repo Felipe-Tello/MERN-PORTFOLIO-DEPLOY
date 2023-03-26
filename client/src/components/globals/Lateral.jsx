@@ -110,7 +110,6 @@ const Lateral = (props) => {
             }
             })}
         </div>
-
     );
 }
  

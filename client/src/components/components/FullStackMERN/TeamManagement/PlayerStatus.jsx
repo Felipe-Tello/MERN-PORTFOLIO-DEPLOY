@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import styles from '../Fullstack.module.css';
 
 const PlayerStatus = ({commonData3}) => {
 
@@ -69,9 +70,10 @@ const PlayerStatus = ({commonData3}) => {
             </div> 
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"70%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                        <div style={{display:"flex", flexDirection:"column", marginBottom:"10%"}}>
-                            <h5 style={{textAlign:"center"}}><Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo`}>Manage Players</Link> <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}>Manage Player Status</Link></h5>
+                    <div className={`${styles.playerContainer} bgn-primary`}>
+                        <div style={{display:"flex", marginBottom:"10%", justifyContent:"space-around"}}>
+                            <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo`}><h5 style={{textAlign:"center"}}>Manage Players</h5></Link> 
+                            <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}><h5 style={{textAlign:"center"}}>Manage Player Status</h5></Link>
                         </div>
                         <div>
                             <h4 style={{textAlign:"center"}}>Player Status - Game {id}</h4>
@@ -91,9 +93,9 @@ const PlayerStatus = ({commonData3}) => {
                                         <tr key={index}>
                                             <td><Link to={`/advanced-mern/administrador-de-equipo/players/${player._id}`}>{player.name}</Link></td>
                                             <td style={{display:"flex", justifyContent:"space-around"}}>
-                                                <button disabled={player.notPlaying.includes(parseInt(id)) || player.undecided.includes(parseInt(id))} className={player.playing.includes(parseInt(id))?"btn btn-success":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"playing",{id})}>Playing</button>
-                                                <button disabled={player.playing.includes(parseInt(id)) || player.undecided.includes(parseInt(id))} className={player.notPlaying.includes(parseInt(id))?"btn btn-danger":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"notPlaying",{id})}>Not Playing</button>
-                                                <button disabled={player.notPlaying.includes(parseInt(id)) || player.playing.includes(parseInt(id))} className={player.undecided.includes(parseInt(id))?"btn btn-warning":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"undecided",{id})}>Undecided</button>
+                                                <button disabled={player.notPlaying.includes(parseInt(id)) || player.undecided.includes(parseInt(id))} className={player.playing.includes(parseInt(id))?"btn btn-success":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"playing",{id})}>Yes</button>
+                                                <button disabled={player.playing.includes(parseInt(id)) || player.undecided.includes(parseInt(id))} className={player.notPlaying.includes(parseInt(id))?"btn btn-danger":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"notPlaying",{id})}>No</button>
+                                                <button disabled={player.notPlaying.includes(parseInt(id)) || player.playing.includes(parseInt(id))} className={player.undecided.includes(parseInt(id))?"btn btn-warning":"btn btn-light"} onClick={() => handleButtonClick(player._id,player,"undecided",{id})}>N/A</button>
                                             </td>
                                         </tr>
                                         ))}

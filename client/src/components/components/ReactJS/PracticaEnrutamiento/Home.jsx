@@ -1,3 +1,5 @@
+import styles from '../ReactJS.module.css' ;
+
 const Home = ({commonData}) => {
     return (
         <div>
@@ -9,7 +11,7 @@ const Home = ({commonData}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code" style={{flexDirection:"column", alignItems:"center"}}>
-                    <div className="bgn-primary" style={{display:"flex",flexDirection:"column", alignItems:"center", width:"60%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.routerContainer} bgn-primary`}>
                         <h5>Possible routes</h5>
                         <ul>
                             <li>.../react-routing/practica-de-enrutamiento - <a href="/react-routing/practica-de-enrutamiento">Back to home</a></li>

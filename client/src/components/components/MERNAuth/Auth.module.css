@@ -1,0 +1,43 @@
+.loginContainer{
+  display:flex; 
+  justify-content:space-around;
+  width: 80%;
+}
+.registerLogin{
+  width:40%; 
+  padding:5%; 
+}
+/* //////////////////////////////////////// */
+.productContainer{
+  width:80%; 
+  display:flex; 
+  justify-content:center; 
+  border:2px solid black; 
+  border-radius:10px; 
+  padding:5%;
+}
+
+@media only screen and (max-width:480px){
+  .loginContainer{
+    display:flex; 
+    flex-direction: column;
+  }
+  .registerLogin{
+    width:100%;
+    margin-bottom: 5%;  
+  }
+
+  .productContainer{
+    width:100%;
+    flex-direction: column; 
+  }
+}
+@media only screen and (max-width:1200px){
+  .productContainer{
+    width:100%; 
+    flex-direction: column; 
+  }
+}
+@media only screen and (min-width:1200px){
+  
+}

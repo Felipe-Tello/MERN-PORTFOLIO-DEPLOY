@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import styles from './ExpressJS.module.css' ;
+
 
 const FakeAPI = () => {
     
@@ -39,8 +41,8 @@ const FakeAPI = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", padding:"5%"}}>
-                        <div className="bgn-second" style={{width:"27%", padding:"2%" ,height:"fit-content", display:"flex",flexDirection:"column", justifyContent:"flex-start"}}>
+                    <div className={`${styles.fakeApiContainer} bgn-primary`}>
+                        <div className={`${styles.singleContainer} bgn-second`}>
                             <button className="btn btn-success" onClick={fetchUser}>Fetch User</button>
                             {responseUser == null ? <div></div> : 
                             <div>
@@ -53,7 +55,7 @@ const FakeAPI = () => {
                             </div>
                             }
                         </div>
-                        <div className="bgn-second" style={{width:"27%", padding:"2%",height:"fit-content", display:"flex",flexDirection:"column", justifyContent:"flex-start", margin:"0 5% 0 5%"}}>
+                        <div className={`${styles.singleContainer} bgn-second`}>
                             <button className="btn btn-success" onClick={fetchCompany}>Fetch Company</button>
                             {responseCompany == null ? <div></div> : 
                             <div>
@@ -72,7 +74,7 @@ const FakeAPI = () => {
                             </div>
                             }
                         </div>
-                        <div className="bgn-second" style={{width:"27%", padding:"2%",height:"fit-content", display:"flex",flexDirection:"column", justifyContent:"flex-start"}}>
+                        <div className={`${styles.singleContainer} bgn-second`}>
                             <button className="btn btn-success" onClick={fetchUserAndCompany}>Fetch User and Company</button>
                             {responseBoth == null ? <div></div> :
                             <div>

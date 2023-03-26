@@ -15,7 +15,7 @@ const List = (props) => {
     }
 
     return (
-        <div style={{width:"50%", display:"flex", flexDirection:"column", alignItems:"center", overflow: "auto", maxHeight:"35vh"}}>
+        <div>
             <h1>All Products</h1>
             <table class="table table-dark table-striped table-bordered border-light" style={{width:"80%"}}>
                 <thead>

@@ -8,7 +8,7 @@ const Form = () => {
     return (
         <div style={{display:"flex", justifyContent:"start", marginTop:"5%"}}>
             <label htmlFor="text-name">Your Name:</label>
-            <input name="name" placeholder="enter your name" id="text-name" type="text" value = {name} onChange = {(e) => setName(e.target.value)}/>
+            <input style={{width:"100%"}} name="name" placeholder="enter your name" id="text-name" type="text" value = {name} onChange = {(e) => setName(e.target.value)}/>
         </div>
     );
 }

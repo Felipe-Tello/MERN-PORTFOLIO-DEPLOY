@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from './ReactJS.module.css' ;
 
 class TodoJunto extends Component {
     state = {
@@ -16,13 +17,13 @@ class TodoJunto extends Component {
         const {edad} = this.state;
 
         return(
-                <div className="bgn-primary" style={{border:"2px solid black",width:"15vw",height:"fit-content", display:"flex", flexDirection:"column", margin:"0 1% 0 1%", padding:"1%", borderRadius:"10px"}}> 
+                <div className={`${styles.propsCards} bgn-primary`} > 
                     <div style={{display:"flex",flexDirection:"column"}}>
                         <h3>{lastName}, {firstName}</h3>
                         <h5>Age: {edad}</h5>
                         <h5>Hair Color: {hairColor}</h5>
                     </div>
-                    <button style={{marginTop:"10%"}} className="btn btn-success" onClick={this.aumentarEdad}>Boton de cumpleaños</button>
+                    <button style={{marginTop:"10%", width:"100%", textAlign:"center", marginBottom:"auto"}} className="btn btn-success" onClick={this.aumentarEdad}>+1 año</button>
                 </div>
         )
     }

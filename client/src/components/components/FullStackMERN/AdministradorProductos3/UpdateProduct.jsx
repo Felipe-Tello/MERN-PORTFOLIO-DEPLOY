@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import styles from '../Fullstack.module.css';
 
 const UpdateProduct = ({commonData3}) => {
     let navigate = useNavigate();
@@ -41,8 +42,8 @@ const UpdateProduct = ({commonData3}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                        <form style={{width:"50%"}} onSubmit={actualizarProducto}>
+                    <div className={`${styles.productContainer} bgn-primary`}>
+                        <form className={`${styles.formList}`} onSubmit={actualizarProducto}>
                             <h1 style={{textAlign:"center"}}>Edit Product</h1>
                             <div className="form-floating">
                                 <input type="text" className={errors.title ? "form-control is-invalid" : "form-control"} placeholder="placeholder" value={title} onChange={(e) => setTitle(e.target.value)}/>

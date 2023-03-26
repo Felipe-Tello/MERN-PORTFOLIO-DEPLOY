@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import axios from "axios";
+import styles from '../Fullstack.module.css';
 
 const UpdateAuthor = ({commonData2}) => {
 
@@ -36,7 +37,7 @@ const UpdateAuthor = ({commonData2}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"40%", display:"flex", justifyContent:"center", flexDirection:"column", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`} style={{flexDirection:"column"}}>
                         <div style={{textAlign:"center"}}>
                             <h2>Favorite authors</h2>
                             <Link className="btn btn-success" to={`/advanced-mern/autores/`}>Home</Link>

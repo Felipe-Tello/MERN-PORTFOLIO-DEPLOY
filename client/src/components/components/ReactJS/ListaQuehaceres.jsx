@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './ReactJS.module.css' ;
 
 const ListaQuehaceres = () => {
 
@@ -32,7 +33,7 @@ const ListaQuehaceres = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{minWidth:"35%", maxWidth:"35%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", padding:"5%"}}>
+                    <div className={`${styles.listContainer} bgn-primary`}>
                         <h4 style={{textAlign:"center"}}>Task List</h4>
                         <form style={{display:"flex", justifyContent:"center", marginBottom:"5%"}} onSubmit={add}>
                             <input style={{height:"100%", width:"70%"}} onChange={e => setInputVal(e.target.value)} value={inputVal} />

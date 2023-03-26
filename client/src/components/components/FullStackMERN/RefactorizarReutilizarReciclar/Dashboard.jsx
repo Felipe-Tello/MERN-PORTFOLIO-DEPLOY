@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FormProduct from "./components/Form";
 import List from "./components/List";
+import styles from '../Fullstack.module.css';
 
 const Dashboard = ({commonData1}) => {
 
@@ -36,13 +37,15 @@ const Dashboard = ({commonData1}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                        <div style={{width:"50%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`}>
+                        <div className={`${styles.formList}`}>
                             <h1>New Product</h1>
                             <FormProduct onSubmitProp={submitProduct} initialTitle='' initialPrice='' initialDescription='' ></FormProduct>
                         </div>
                         {loaded &&(
-                        <List products={productsList} setProducts={setProductsList}></List>
+                        <div className={`${styles.formList}`} style={{display:"flex", flexDirection:"column", alignItems:"center", overflow: "auto", maxHeight:"35vh"}}>
+                            <List products={productsList} setProducts={setProductsList}></List>
+                        </div>
                         )}
                     </div>
                 </div>

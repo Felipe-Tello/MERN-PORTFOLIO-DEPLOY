@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import styles from '../Fullstack.module.css';
 
 const Dashboard = ({commonData3}) => {
 
@@ -56,8 +57,8 @@ const Dashboard = ({commonData3}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                        <div style={{width:"50%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`}>
+                        <div className={`${styles.formList}`}>
                             <form onSubmit={submitProduct}>
                                 <h1>New Product</h1>
                                 <div className="form-floating">
@@ -77,7 +78,7 @@ const Dashboard = ({commonData3}) => {
                                 <input type="submit" className="btn btn-success" value="Guardar" />
                             </form>
                         </div>
-                        <div style={{width:"50%", display:"flex", flexDirection:"column", alignItems:"center", overflow: "auto", maxHeight:"35vh"}}>
+                        <div className={`${styles.formList}`} style={{display:"flex", flexDirection:"column", alignItems:"center", overflow: "auto", maxHeight:"35vh"}}>
                             <h1>All Products</h1>
                             <table class="table table-dark table-striped table-bordered border-light" style={{width:"80%"}}>
                                 <thead>

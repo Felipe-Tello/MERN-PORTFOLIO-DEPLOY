@@ -1,0 +1,33 @@
+.fakeApiContainer{
+  width:80%; 
+  display:flex; 
+  justify-content:center; 
+  border:2px solid black; 
+  padding:5%;
+}
+/* //////////////////////////////////////// */
+.singleContainer{
+  width:27%; 
+  padding:2%;
+  height:fit-content; 
+  display:flex;
+  flex-direction:column; 
+  justify-content:flex-start;
+  margin: 2%;
+}
+
+@media only screen and (max-width:480px){
+  
+}
+@media only screen and (max-width:1200px){
+  .fakeApiContainer{
+    width:100%; 
+    flex-direction: column;
+  }
+  .singleContainer{
+    width:100%; 
+  }
+}
+@media only screen and (min-width:1200px){
+  
+}

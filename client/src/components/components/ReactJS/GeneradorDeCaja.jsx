@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './ReactJS.module.css' ;
 
 const GeneradorDeCaja = () => {
 
@@ -29,7 +30,7 @@ const GeneradorDeCaja = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{minWidth:"40%", maxWidth:"50%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.boxGenerator} bgn-primary`}>
                         <form onSubmit={addBlock}>
                             <div>
                                 <label>Color</label>

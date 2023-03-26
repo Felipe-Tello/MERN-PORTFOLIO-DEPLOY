@@ -35,8 +35,8 @@
 }
 /* -------------------------- */
 .Font-background{
-  width: 7vw;
-  height: 7vw;
+  width: 8vw;
+  height: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,8 +46,8 @@
   content:'';
   transition: all 0.7s; 
   position: absolute;
-  width: 7vw;
-  height: 7vw;
+  width: 8vw;
+  height: 8vw;
   border-radius: 100px;
   opacity: 1;  
 }
@@ -193,7 +193,7 @@ html{
   border: 2px solid black;
   text-decoration: line-through;
   width: 10vw;
-  height:3vh;
+  height: 3vh;
 }
 
 /* -------------------------- */
@@ -286,6 +286,12 @@ html{
   display: block;
   margin-top: 0;
 }
+.offcanvas{
+  max-width: 55%;
+}
+.fix-nav{
+  height: 14vh;
+}
 /* -------------------------- */
 /* ------------Theme Color-------------- */
 
@@ -298,5 +304,32 @@ html{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width:480px){
+  .M, .E, .R, .N{
+    font-size: 3rem;
+  }
+  .fix-nav{
+    height: 22vh;
+  }
+  .Font-background{
+    width: 15vw;
+    height: 15vw;
+  }
+  .Font-background:before{
+    width: 15vw;
+    height: 15vw;
+  }
+}
+@media only screen and (min-width:481px){
+  .M, .E, .R, .N{
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width:1200px){
+  .M, .E, .R, .N{
+    font-size: 6rem;
   }
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
+import styles from '../Fullstack.module.css';
 
 const ShowPlayer = ({commonData3}) => {
     let navigate = useNavigate();
@@ -36,7 +37,7 @@ const ShowPlayer = ({commonData3}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"70%", display:"flex", justifyContent:"center", flexDirection:"column", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.playerContainer} bgn-primary`}>
                         <div style={{textAlign:"center", marginBottom:"5%"}}>
                             <Link to="/advanced-mern/administrador-de-equipo/" className="btn btn-primary">Back to home</Link>
                             <h1>Player Name: {player.name}</h1>
@@ -47,29 +48,29 @@ const ShowPlayer = ({commonData3}) => {
                                 <thead>
                                     <tr>
                                         <th>Status</th>
-                                        <th>Match 1</th>
-                                        <th>Match 2</th>
-                                        <th>Match 3</th>
+                                        <th>Set 1</th>
+                                        <th>Set 2</th>
+                                        <th>Set 3</th>
                                         <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Playing</td>
+                                        <td>Yes</td>
                                         <td>{player.playing ? (player.playing.includes(1)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.playing ? (player.playing.includes(2)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.playing ? (player.playing.includes(3)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.playing ? player.playing.length : " "}</td>
                                     </tr>
                                     <tr>
-                                        <td>No Playing</td>
+                                        <td>No</td>
                                         <td>{player.notPlaying ? (player.notPlaying.includes(1)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.notPlaying ? (player.notPlaying.includes(2)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.notPlaying ? (player.notPlaying.includes(3)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.notPlaying ? player.notPlaying.length : " "}</td>
                                     </tr>
                                     <tr>
-                                        <td>Undecided</td>
+                                        <td>N/A</td>
                                         <td>{player.undecided ? (player.undecided.includes(1)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.undecided ? (player.undecided.includes(2)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>
                                         <td>{player.undecided ? (player.undecided.includes(3)?<img style={{borderRadius:"20px"}} src="https://w7.pngwing.com/pngs/102/702/png-transparent-check-mark-computer-icons-green-tick-green-check-icon-miscellaneous-angle-rectangle-thumbnail.png" alt="" height={25} width={25} />: <img style={{borderRadius:"20px"}} src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="" height={25} width={25}></img> ): " "}</td>

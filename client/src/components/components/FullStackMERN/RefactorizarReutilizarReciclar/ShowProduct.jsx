@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
 import DeleteButton from "./components/DeleteButton";
+import styles from '../Fullstack.module.css';
 
 const ShowProduct = ({commonData1}) => {
     let navigate = useNavigate();
@@ -31,7 +32,7 @@ const ShowProduct = ({commonData1}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"30%", display:"flex", flexDirection:"column",  justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.showContainer} bgn-primary`}>
                         <Link style={{marginBottom:"5%"}} to="/advanced-mern/refactorizar-reutilizar-reciclar" className="btn btn-primary">Back to home</Link>
                         <div style={{textAlign:"center"}}>
                             <h1>{product.title}</h1>

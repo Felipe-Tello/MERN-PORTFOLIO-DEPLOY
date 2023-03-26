@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonLogout from "./ButtonLogout";
+import styles from '../Auth.module.css';
 
 const Dashboard = ({commonData2}) => {
 
@@ -44,40 +45,14 @@ const Dashboard = ({commonData2}) => {
     return (
         <div>
             <div className="Title">
-                <h2>{commonData2.title}</h2>
-                
+                <h2>{commonData2.title}</h2>    
                 <p>{commonData2.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            {/* <div className="Core">
-                <ButtonLogout></ButtonLogout>
-                <h2>Favorite authors</h2>
-                <Link to={`/authentication/autores-con-bcrypt-jwt/new`}>Add an author</Link>
-                <h4>We have quotes by:</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Author</th>
-                            <th>Actions available</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {sortedAuthorsList.map((author, index)=> (
-                        <tr key={index}>
-                            <td>{author.name}</td>
-                            <td>
-                                <Link className="btn btn-warning" to={`/authentication/autores-con-bcrypt-jwt/edit/${author._id}`}>Edit</Link>
-                                <button className="btn btn-danger" onClick={() => deleteAuthor(author._id)}>Delete</button>
-                            </td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div> */}
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", flexDirection:"column", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`} style={{flexDirection:"column"}}>
                         <div style={{textAlign:"center"}}>
                             <ButtonLogout></ButtonLogout>
                             <h2>Favorite authors</h2>

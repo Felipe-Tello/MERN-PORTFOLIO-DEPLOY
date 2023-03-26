@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styles from '../Fullstack.module.css' ;
 
 const Dashboard = ({commonData1}) => {
 
@@ -46,7 +47,7 @@ const Dashboard = ({commonData1}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`}>
                         <form style={{width:"50%"}} onSubmit={submitProduct}>
                             <h1>New Product</h1>
                             <div className="form-floating">

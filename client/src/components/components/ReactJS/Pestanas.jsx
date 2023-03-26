@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './ReactJS.module.css' ;
 
 const Pestanas = ({labelContent}) => {
 
@@ -18,11 +19,11 @@ const Pestanas = ({labelContent}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%", display:"flex",flexDirection:"column", justifyContent:"center"}}>
-                        <div style={{display:"flex"}}>
+                    <div className={`${styles.tabsContainer} bgn-primary`}>
+                        <div style={{width:"100%",display:"flex"}}>
                         {labelContent.map((tab, index) => {
                             return(
-                                <div key={index} style={{ padding:"10px 49px", border:"2px grey solid", borderBottom:"none", textAlign:"center",borderTopRightRadius:"10px" ,borderTopLeftRadius:"10px"}} onClick={(e) => onClickHandler(e,index)}>
+                                <div key={index} className={`${styles.tabs}`} onClick={(e) => onClickHandler(e,index)}>
                                     <h6>{tab.label}</h6>
                                 </div>
                             )

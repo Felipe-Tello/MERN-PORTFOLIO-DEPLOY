@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonLogout from "./ButtonLogout";
+import styles from '../Auth.module.css';
 
 const NewAuthor = ({commonData2}) => {
 
@@ -37,29 +38,13 @@ const NewAuthor = ({commonData2}) => {
         <div>
             <div className="Title">
                 <h2>{commonData2.title}</h2>
-                
                 <p>{commonData2.description}</p>
             </div>
             <div className="Disclaimer">
             </div>
-            {/* <div className="Core">
-                <ButtonLogout></ButtonLogout>
-                <h2>Favorite authors</h2>
-                <Link to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Home</Link>
-                <h4>Add a new author:</h4> 
-                <form onSubmit={submitAutor}>
-                    <div className="form-group">
-                        <label htmlFor="name">Name:</label>
-                        <input id="name" name="name" type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
-                        {errors.name ? <span className="text-danger">{errors.name.message}</span> : null}
-                    </div>
-                    <Link className="btn btn-warning" to={"/authentication/autores-con-bcrypt-jwt/dashboard"}>Cancel</Link>
-                    <input type="submit" className="btn btn-success" value="Guardar" />
-                </form>
-            </div> */}
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"40%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`} style={{flexDirection:"column"}}>
                         <div style={{textAlign:"center"}}>
                             <ButtonLogout></ButtonLogout>
                             <h2>Favorite authors</h2>

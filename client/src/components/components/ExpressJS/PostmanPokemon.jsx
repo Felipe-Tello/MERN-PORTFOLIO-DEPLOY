@@ -9,8 +9,8 @@ const PostmanPokemon = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code" style={{flexDirection:"column", alignItems:"center"}}>
-                    <div>
-                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/lOT6Ph8NDbg" title="Postman + Pokemon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div style={{width:"100%", height:"40vh"}}>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lOT6Ph8NDbg" title="Postman + Pokemon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div style={{marginTop:"5%"}}>
                         <h4>Routes Used</h4>

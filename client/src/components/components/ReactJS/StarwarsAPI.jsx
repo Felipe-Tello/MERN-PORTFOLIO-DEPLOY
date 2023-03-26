@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from './ReactJS.module.css' ;
 
 const StarwarsAPI = (props) => {
     const [apiCat, setApiCat] = useState({});
@@ -116,7 +117,7 @@ const StarwarsAPI = (props) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"40%", border:"2px solid black" , borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.apiSW} bgn-primary`}>
                         <form onSubmit={handleSubmit} onChange={handleOnChange}>
                             <div>
                                 <select style={{width:"100%", textAlign:"center"}} id="categories" name="category">

@@ -1,0 +1,29 @@
+.JokeApiContainer{
+  display:flex; 
+  justify-content:space-around;
+}
+.JokeApiBlock{
+  width:40%;
+  margin-bottom: 5%;
+}
+/* //////////////////////////////////////// */
+
+@media only screen and (max-width:480px){
+  .JokeApiContainer{
+    flex-direction: column;
+  }
+  .JokeApiBlock{
+    width:100%
+  }
+}
+@media only screen and (max-width:1000px){
+  .JokeApiContainer{
+    flex-direction: column;
+  }
+  .JokeApiBlock{
+    width:100%
+  }
+}
+@media only screen and (min-width:1200px){
+  
+}

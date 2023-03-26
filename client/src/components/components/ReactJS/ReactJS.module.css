@@ -1,0 +1,165 @@
+.propsCards{
+  width:15vw;
+  height:fit-content;
+  margin:1% 1% 1% 1%;
+  padding:1%;
+  border:2px solid black;
+  border-radius:10px;
+}
+/* //////////////////////////////////////// */
+.forms{
+  width:40%;
+  border:2px solid black; 
+  border-radius:10px;
+  padding:5%;
+}
+.formsContainer{
+  width:80%; 
+  display:flex; 
+  justify-content:space-around;
+}
+/* //////////////////////////////////////// */
+
+.boxGenerator{
+  min-width:40%; 
+  max-width:50%; 
+  border:2px solid black; 
+  border-radius:10px; 
+  padding:5%;
+}
+
+/* //////////////////////////////////////// */
+
+.tabsContainer{
+  width:40%; 
+  border:2px solid black; 
+  border-radius:10px; 
+  padding:5%; 
+  display:flex;
+  flex-direction:column; 
+  justify-content:center;
+}
+
+.tabs{
+  width:calc(100%/3); 
+  padding:10px 49px; 
+  border:2px grey solid; 
+  border-bottom:none; 
+  text-Align:center;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+
+/* //////////////////////////////////////// */
+
+.listContainer{
+  width: 35%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border:2px solid black;
+  padding:5%;
+}
+
+/* //////////////////////////////////////// */
+.apiContainer{
+  display:flex; 
+  flex-direction:column; 
+  width:40%; 
+  border:2px solid black; 
+  padding:5%;
+}
+/* //////////////////////////////////////// */
+.routerContainer{
+  display:flex;
+  flex-direction:column; 
+  align-items:center; 
+  width:60%; 
+  border:2px solid black; 
+  border-radius:10px; 
+  padding:5%;
+}
+/* //////////////////////////////////////// */
+.apiSW{
+  width:40%; 
+  border:2px solid black; 
+  border-radius:10px; 
+  padding:5%;
+}
+/* //////////////////////////////////////// */
+
+@media only screen and (max-width:480px){
+  .propsCards{
+    width:40vw;
+  }
+  /* //////////////////////////////////////// */
+  .forms{
+    width:100%;
+  }
+  .formsContainer{
+    width:100%;
+    flex-direction: column;
+  }
+  /* //////////////////////////////////////// */
+  .boxGenerator{
+    min-width:90%; 
+    max-width:100%; 
+  }  
+  /* //////////////////////////////////////// */
+  .tabsContainer{
+    width:100%; 
+  }
+  .tabs{
+    width:20vw;
+    padding:10px 16%; 
+  }
+  /* //////////////////////////////////////// */
+  .listContainer{
+    width: 100%;
+  }
+  /* //////////////////////////////////////// */
+  .apiContainer{
+    width:80%; 
+  }
+  /* //////////////////////////////////////// */
+  .routerContainer{ 
+    width:100%; 
+  }
+  /* //////////////////////////////////////// */
+  .apiSW{
+    width:90%; 
+  }
+  /* //////////////////////////////////////// */
+}
+@media only screen and (min-width:481px){
+  .forms{
+    width:80%;
+  }
+  .formsContainer{
+    width:90%; 
+  }
+  /* //////////////////////////////////////// */
+  .boxGenerator{
+    min-width:60%; 
+    max-width:70%; 
+  }
+  /* //////////////////////////////////////// */
+  .tabsContainer{
+    width:70%; 
+  }
+  /* //////////////////////////////////////// */
+  .listContainer{
+    width: 65%;
+  }
+  /* //////////////////////////////////////// */
+  .apiContainer{
+    width:60%; 
+  }
+  /* //////////////////////////////////////// */
+}
+@media only screen and (min-width:1200px){
+  .apiContainer{
+    width:50%; 
+  }
+  /* //////////////////////////////////////// */
+}

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import FormProduct from "./components/Form";
+import styles from '../Fullstack.module.css';
 
 const UpdateProduct = ({commonData1}) => {
     let navigate = useNavigate();
@@ -34,9 +35,9 @@ const UpdateProduct = ({commonData1}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"80%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.productContainer} bgn-primary`} style={{flexDirection:"column", alignItems:"center"}}>
                         <h1>Edit Product</h1>
-                        <div style={{width:"50%"}}>
+                        <div className={`${styles.formList}`}>
                             {loaded &&( 
                             <FormProduct onSubmitProp={updateProduct} initialTitle={product.title} initialPrice={product.price} initialDescription={product.description} ></FormProduct>
                             )}

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './ReactJS.module.css' ;
 
 const FormularioConHooks = () => {
 
@@ -19,8 +20,8 @@ const FormularioConHooks = () => {
             <div>
                 <div style={{display:"flex", justifyContent:"center", background:"#303134"}}>
                     <div className="Core no-code">
-                        <div style={{width:"80%", display:"flex", justifyContent:"space-around"}}>
-                            <div className="bgn-primary" style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                        <div className={`${styles.formsContainer}`}>
+                            <div className={`${styles.forms} bgn-primary`}>
                                 <h4 style={{textAlign:"center"}}>Form Data</h4>
                                 <form>
                                     <div class="form-floating">
@@ -45,8 +46,8 @@ const FormularioConHooks = () => {
                                     </div>
                                 </form>
                             </div>
-                            <div className="bgn-primary" style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                                <h4 style={{textAlign:"center"}}>Real Time Data</h4>
+                            <div className={`${styles.forms} bgn-primary`}>
+                                <h4 style={{textAlign:"center"}}>Actual Data</h4>
                                 <div class="form-floating">
                                     <input disabled={true} type="text" class="form-control" value={firstName}/>
                                     <label>First Name</label>                            

@@ -10,6 +10,7 @@ import MasFormularios from '../../components/ReactJS/MasFormularios';
 import Pestanas from '../../components/ReactJS/Pestanas';
 import ValidacionDeFormulario from '../../components/ReactJS/ValidacionDeFormulario';
 import FunctionalComponentsIndex from '../../Introduction/2-ReactJS/3-FunctionalComponentsIndex';
+import styles from '../Routes.module.css' ;
 
 const FunctionalComponentsRoutes = () =>{
     return(
@@ -26,7 +27,7 @@ const FunctionalComponentsRoutes = () =>{
                         </div>
                         <div style={{display:"flex", justifyContent:"center"}}>
                             <div className="Core no-code">
-                                <div style={{width:"80%", display:"flex", justifyContent:"space-evenly", textAlign:"center"}}>
+                                <div className={`${styles.mediaFlexContainer}`}>
                                     <GranInversion firstName="Jane" lastName="Doe" age={45} hairColor="Black"></GranInversion>
                                     <GranInversion firstName="John" lastName="Smith" age={88} hairColor="Brown"></GranInversion>
                                     <GranInversion firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown"></GranInversion>
@@ -63,7 +64,7 @@ const FunctionalComponentsRoutes = () =>{
                         </div>
                         <div style={{display:"flex", justifyContent:"center"}}>
                             <div className="Core no-code">
-                                <div className='bgn-primary' style={{width:"40%", border:"2px solid black", padding:"5%"}}>
+                                <div className={`${styles.navBarContainer} bgn-primary`}>
                                     <Wrapper>
                                         <Navbar/>
                                         <FormWrapper/>

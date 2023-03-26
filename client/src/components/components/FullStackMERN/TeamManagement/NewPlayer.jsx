@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import styles from '../Fullstack.module.css';
 
 const NewPlayer = ({commonData3}) => {
 
@@ -30,9 +31,10 @@ const NewPlayer = ({commonData3}) => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{width:"70%", display:"flex", flexDirection:"column", justifyContent:"center", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
-                        <div style={{display:"flex", flexDirection:"column", marginBottom:"10%"}}>
-                            <h5 style={{textAlign:"center"}}><Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo`}>Manage Players</Link> <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}>Manage Player Status</Link></h5>
+                    <div className={`${styles.playerContainer} bgn-primary`}>
+                        <div style={{display:"flex", marginBottom:"10%", justifyContent:"space-around"}}>
+                            <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo`}><h5 style={{textAlign:"center"}}>Manage Players</h5></Link> 
+                            <Link className="bgn-second" style={{border:"2px black solid", padding:"5%", borderRadius:"10px", textDecoration:"none", color:"white"}} to={`/advanced-mern/administrador-de-equipo/status/game/1`}><h5 style={{textAlign:"center"}}>Manage Player Status</h5></Link>
                         </div>
                         <div>
                             <h5 style={{display:"flex", justifyContent:"space-between", marginBottom:"5%"}}><Link to={`/advanced-mern/administrador-de-equipo`}><button className="btn btn-light">List</button></Link> <Link to={`/advanced-mern/administrador-de-equipo/players/addplayer`}><button className="btn btn-light">Add Player</button></Link></h5>

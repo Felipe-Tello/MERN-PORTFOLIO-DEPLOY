@@ -1,0 +1,8 @@
+.navSuperior{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1% 0 1% 0;
+    border-bottom: 1px solid white
+}

@@ -16,7 +16,6 @@ const FormProduct = (props) => {
     }
 
     return (
-        <div>
             <form onSubmit={submitProduct}>
                 <div className="form-floating">
                     <input type="text" className="form-control" placeholder="placeholder" value={title} onChange={(e) => setTitle(e.target.value)}/>
@@ -32,7 +31,6 @@ const FormProduct = (props) => {
                 </div>
                 <input type="submit" className="btn btn-success" value="Guardar" />
             </form>
-        </div>
     );
 }
  

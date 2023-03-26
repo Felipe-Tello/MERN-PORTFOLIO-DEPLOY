@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './ReactJS.module.css' ;
 
 const MasFormularios = () => {
     const [firstName, setFirstName] = useState("");
@@ -26,7 +27,7 @@ const MasFormularios = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code" >
-                    <div className="bgn-primary" style={{width:"40%", border:"2px solid black", borderRadius:"10px", padding:"5%"}}>
+                    <div className={`${styles.forms} bgn-primary`}>
                         <h4 style={{textAlign:"center"}}>Form Data</h4>
                         <form onSubmit={enviarDatos}>
                             <div class="form-floating">

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import styles from './ReactJS.module.css' ;
 
 const AxiosPokemonAPI = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -21,7 +22,7 @@ const AxiosPokemonAPI = () => {
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <div className="Core no-code">
-                    <div className="bgn-primary" style={{display:"flex", flexDirection:"column" , width:"40%", border:"2px solid black", padding:"5%"}}>
+                    <div className={`${styles.apiContainer} bgn-primary`}>
                         <button className="btn btn-success" style={{marginBottom:"5%"}} onClick={consultaAPI}>Fetch Pokemon</button>
                         <div style={{maxHeight:"30vh", overflow: "auto"}}>
                             <ul>

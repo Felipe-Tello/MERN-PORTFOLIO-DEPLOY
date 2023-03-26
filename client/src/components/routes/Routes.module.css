@@ -1,0 +1,32 @@
+.mediaFlexContainer{
+    width:95%;
+    display:flex;
+    justify-content:center;
+    text-align:center
+}
+
+.navBarContainer{
+    width: 40%;
+    border: 2px solid black; 
+    padding: 5%;
+}
+
+@media only screen and (max-width:480px){
+    .mediaFlexContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBarContainer{
+        width: 95%;
+    }
+}
+@media only screen and (min-width:481px){
+    .navBarContainer{
+        width: 75%;
+    }
+}
+@media only screen and (min-width:1200px){
+    .navBarContainer{
+        width: 55%;
+    }
+}
